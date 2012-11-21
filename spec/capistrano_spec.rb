@@ -15,14 +15,14 @@ describe Capifig::Capistrano do
   end
 
   it "should deploy config files on capifig:deploy" do
-    Capifig::Configuration.should_receive(:deploy).with(cap, 'config/deploy/stages/production')
+    Capifig::Configuration.should_receive(:deploy).with(cap, 'config/deploy/production')
 
     cap.find_and_execute_task('capifig:deploy')
   end
 
   it "should should get config path from the current stage" do
     cap.set(:stage, 'test-stage')
-    Capifig::Configuration.should_receive(:deploy).with(cap, 'config/deploy/stages/test-stage')
+    Capifig::Configuration.should_receive(:deploy).with(cap, 'config/deploy/test-stage')
 
     cap.find_and_execute_task('capifig:deploy')
   end

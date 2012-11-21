@@ -14,7 +14,7 @@ module Capifig
           DESC
           task :deploy do
             stage = fetch(:stage, 'production')
-            config_path = fetch(:config_path, "config/deploy/stages/#{stage}")
+            config_path = fetch(:config_path, "config/deploy/#{stage}")
             Capifig::Configuration.deploy(configuration, config_path)
             logger.info "Configuration deployment complete."
           end

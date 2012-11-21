@@ -17,9 +17,9 @@ Add the following line to your Capistrano deploy.rb:
 
 ## Usage
 
-For each stage, create a folder in `config/deploy/stages/<stage>`, containing all the config files specific to that
+For each stage, create a folder in `config/deploy/<stage>`, containing all the config files specific to that
 stage. On deployment (after deploy:update_code), these files will be copied to your app's root. Subfolders may be used,
-but must already exist on the server. For example, if you have a folder `config/deploy/stages/production/dbconfig`, you
+but must already exist on the server. For example, if you have a folder `config/deploy/production/dbconfig`, you
 also need a folder `dbconfig` in the root of your app.
 
 ## Contributing
