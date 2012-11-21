@@ -1,11 +1,11 @@
 require 'spec_helper'
-require 'capifig/setup'
+require 'capifig/capistrano'
 require 'capifig/configuration'
 
-describe Capifig::Setup do
+describe Capifig::Capistrano do
   let(:cap) do
     cap = Capistrano::Configuration.new
-    Capifig::Setup.load_into cap
+    Capifig::Capistrano.load_into cap
     cap.dry_run = true
     cap
   end

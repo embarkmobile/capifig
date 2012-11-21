@@ -3,7 +3,7 @@ require 'capistrano'
 require 'capifig/configuration'
 
 module Capifig
-  module Setup
+  module Capistrano
     def self.load_into(configuration)
       configuration.load do
         after "deploy:update_code", "capifig:deploy"
@@ -26,5 +26,5 @@ end
 
 if Capistrano::Configuration.instance
   # Automatically load configuration into capistrano, if capistrano is being configured
-  Capifig::Setup.load_into(Capistrano::Configuration.instance)
+  Capifig::Capistrano.load_into(Capistrano::Configuration.instance)
 end
