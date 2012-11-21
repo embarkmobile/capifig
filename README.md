@@ -1,6 +1,9 @@
 # Capifig
 
-TODO: Write a gem description
+Deploy different configuration per stage with Capistrano (with the multi-stage extension).
+
+The 0.0.x releases of this gem are unstable, and the API/usage may change significantly, even in minor version
+increments.
 
 ## Installation
 
@@ -8,17 +11,16 @@ Add this line to your application's Gemfile:
 
     gem 'capifig'
 
-And then execute:
+Add the following line to your Capistrano deploy.rb:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install capifig
+    require 'capifig/capistrano'
 
 ## Usage
 
-TODO: Write usage instructions here
+For each stage, create a folder in `config/deploy/stages/<stage>`, containing all the config files specific to that
+stage. On deployment (after deploy:update_code), these files will be copied to your app's root. Subfolders may be used,
+but must already exist on the server. For example, if you have a folder `config/deploy/stages/production/dbconfig`, you
+also need a folder `dbconfig` in the root of your app.
 
 ## Contributing
 

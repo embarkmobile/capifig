@@ -10,7 +10,7 @@ module Capifig
 
         namespace :capifig do
           desc <<-DESC
-            TODO: write description here
+            Deploy configuration files.
           DESC
           task :deploy do
             stage = fetch(:stage, 'production')
