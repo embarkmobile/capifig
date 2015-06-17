@@ -2,7 +2,7 @@
 
 Deploy different configuration per stage with Capistrano (with the multi-stage extension).
 
-The 0.0.x releases of this gem are unstable, and the API/usage may change significantly, even in minor version
+The 0.x releases of this gem are unstable, and the API/usage may change significantly, even in minor version
 increments.
 
 ## Installation
