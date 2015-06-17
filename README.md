@@ -11,9 +11,17 @@ Add this line to your application's Gemfile:
 
     gem 'capifig'
 
-Add the following line to your Capistrano deploy.rb:
+### Capistrano 3
+
+Add the following line to your Capistrano `config/deploy.rb`:
 
     require 'capifig/capistrano'
+
+### Capistrano 2
+
+Add the following line to your Capistrano Capfile:
+
+    require 'capifig/capistrano3'
 
 ## Usage
 
@@ -21,11 +29,3 @@ For each stage, create a folder in `config/deploy/<stage>`, containing all the c
 stage. On deployment (after deploy:update_code), these files will be copied to your app's root. Subfolders may be used,
 but must already exist on the server. For example, if you have a folder `config/deploy/production/dbconfig`, you
 also need a folder `dbconfig` in the root of your app.
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request

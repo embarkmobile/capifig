@@ -1,12 +1,10 @@
 language: ruby
-bundler_args: --without development
 script: "bundle exec rspec"
 env:
   - CI=true
 rvm:
-  - 1.9.2
-  - 1.9.3
+  - 2.2.0
 notifications:
   recipients:
-    - ralf@embarkmobile.com
+    - ralf@journeyapps.com
 
