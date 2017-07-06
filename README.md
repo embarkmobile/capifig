@@ -13,15 +13,15 @@ Add this line to your application's Gemfile:
 
 ### Capistrano 3
 
-Add the following line to your Capistrano `config/deploy.rb`:
-
-    require 'capifig/capistrano'
-
-### Capistrano 2
-
 Add the following line to your Capistrano Capfile:
 
     require 'capifig/capistrano3'
+
+### Capistrano 2
+
+Add the following line to your Capistrano `config/deploy.rb`:
+
+    require 'capifig/capistrano'
 
 ## Usage
 
